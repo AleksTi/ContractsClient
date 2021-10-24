@@ -24,7 +24,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'ru.yandex.sashanc.citbars.contractsclient'
-    mainClass = 'ru.yandex.sashanc.citbars.contractsclient.HelloApplication'
+    mainClass = 'ru.yandex.sashanc.citbars.contractsclient.Main'
 }
 
 javafx {
@@ -33,9 +33,12 @@ javafx {
 }
 
 dependencies {
+    implementation 'org.jetbrains:annotations:20.1.0'
 
+//    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 }
 
 test {
