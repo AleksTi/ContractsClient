@@ -12,7 +12,7 @@ repositories {
 }
 
 ext {
-    junitVersion = '5.7.1'
+    junitVersion = '5.8.1'
 }
 
 sourceCompatibility = '16'
@@ -24,7 +24,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'ru.yandex.sashanc.citbars.contractsclient'
-    mainClass = 'ru.yandex.sashanc.citbars.contractsclient.Main'
+    mainClass = 'ru.yandex.sashanc.citbars.contractsclient.Application'
 }
 
 javafx {
@@ -33,14 +33,19 @@ javafx {
 }
 
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
-
-//    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    implementation 'org.jetbrains:annotations:22.0.0'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-
+//    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.12'
+    implementation group: 'org.json', name: 'json', version: '20210307'
+//    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
 }
 
 test {
     useJUnitPlatform()
+}
+
+java {
+    modularity.inferModulePath.set(true)
 }

@@ -6,7 +6,7 @@ public class Contract {
     private Long id;
     private LocalDate dateContract;
     private LocalDate dateUsing;
-    private Boolean isActive;
+    private String status;
 
     public static String getFieldName(String field){
         String fieldName = null;
@@ -20,10 +20,9 @@ public class Contract {
             case "dateUsing":
                 fieldName = "Дата обновления";
                 break;
-            case "isActive":
+            case "status":
                 fieldName = "Статус договора";
                 break;
-
         }
         return fieldName;
     }
@@ -31,10 +30,11 @@ public class Contract {
     public Contract() {
     }
 
-    public Contract(Long id, LocalDate dateContract, LocalDate dateUsing) {
+    public Contract(Long id, LocalDate dateContract, LocalDate dateUsing, String Status) {
         this.id = id;
         this.dateContract = dateContract;
         this.dateUsing = dateUsing;
+        this.status = Status;
     }
 
     public Long getId() {
@@ -61,11 +61,21 @@ public class Contract {
         this.dateUsing = dateUsing;
     }
 
-    public Boolean getActive() {
-        return isActive;
+    public String getStatus() {
+        return status;
     }
 
-    public void setActive(Boolean active) {
-        isActive = active;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "id=" + id +
+                ", dateContract=" + dateContract +
+                ", dateUsing=" + dateUsing +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

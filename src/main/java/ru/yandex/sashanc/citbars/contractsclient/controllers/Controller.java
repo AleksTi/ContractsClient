@@ -1,6 +1,5 @@
 package ru.yandex.sashanc.citbars.contractsclient.controllers;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,8 +13,6 @@ import ru.yandex.sashanc.citbars.contractsclient.services.ContractServiceImpl;
 import ru.yandex.sashanc.citbars.contractsclient.services.IContractService;
 
 import java.lang.reflect.Field;
-import java.util.Collections;
-import java.util.List;
 
 public class Controller {
     private ObservableList<Contract> contractObsList = FXCollections.observableArrayList();
