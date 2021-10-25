@@ -1,10 +1,11 @@
 package ru.yandex.sashanc.citbars.contractsclient.services;
 
 import ru.yandex.sashanc.citbars.contractsclient.models.Contract;
+import ru.yandex.sashanc.citbars.contractsclient.repository.ContractDataRestImpl;
+import ru.yandex.sashanc.citbars.contractsclient.repository.IContractData;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ContractServiceImpl implements IContractService {
@@ -24,6 +25,10 @@ public class ContractServiceImpl implements IContractService {
             contractList.add(contract);
             System.out.println(contract);
         }
+
+        IContractData contractData = new ContractDataRestImpl();
+        contractData.getContractList();
+
         return contractList;
     }
 }
