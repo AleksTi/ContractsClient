@@ -24,8 +24,7 @@ public class ContractDataRestImpl implements IContractData{
 
     private String getContractsFromRest(){
         //TODO mock-заглушка для проверки запроса у сервмса
-        String urlAdress = "https://api.openweathermap.org/data/2.5/onecall?lat=55.7887&lon=49.1221" +
-                "&exclude=minutely,hourly,alerts&lang=ru&appid=c3901f61095e0b7da2e5edbe1f0bbf5d";
+        String urlAdress = "https://api.openweathermap.org";
         StringBuilder content = new StringBuilder();
         try {
             URL url = new URL(urlAdress);
