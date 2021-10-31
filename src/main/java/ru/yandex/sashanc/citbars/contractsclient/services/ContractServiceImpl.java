@@ -8,7 +8,6 @@ import ru.yandex.sashanc.citbars.contractsclient.repository.dao.IContractDao;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ContractServiceImpl implements IContractService {

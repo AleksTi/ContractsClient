@@ -24,12 +24,8 @@ public class ContractDto implements Serializable {
     private Integer id;
     @JsonProperty("name")
     private String name;
-//    @JsonDeserialize(using = LocalDateDeserializer.class)
-//    @JsonSerialize(using = LocalDateSerializer.class)
     @JsonProperty("contractDate")
     private String contractDate;
-//    @JsonDeserialize(using = LocalDateDeserializer.class)
-//    @JsonSerialize(using = LocalDateSerializer.class)
     @JsonProperty("contractUsingDate")
     private String contractUsingDate;
     @JsonProperty("status")

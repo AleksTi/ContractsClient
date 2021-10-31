@@ -15,7 +15,7 @@ import ru.yandex.sashanc.citbars.contractsclient.services.IContractService;
 import java.lang.reflect.Field;
 
 public class Controller {
-    private ObservableList<Contract> contractObsList = FXCollections.observableArrayList();
+    private final ObservableList<Contract> contractObsList = FXCollections.observableArrayList();
 
     @FXML
     private Label welcomeText;
@@ -28,7 +28,7 @@ public class Controller {
 
     @FXML
     void initialize(){
-        welcomeText.setText("Welcome to JavaFX Application! - initialize()");
+        welcomeText.setText("Welcome to JavaFX ContractsApp!");
         setCellTypeValues();
     }
 

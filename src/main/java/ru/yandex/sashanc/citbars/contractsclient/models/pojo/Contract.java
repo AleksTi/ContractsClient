@@ -10,32 +10,17 @@ public class Contract {
     private String status;
 
     public static String getFieldName(String field){
-        String fieldName;
-        switch (field){
-            case "id":
-                fieldName = "ID";
-                break;
-            case "name":
-                fieldName = "Name";
-                break;
-            case "dateContract":
-                fieldName = "Дата договора";
-                break;
-            case "dateUsing":
-                fieldName = "Дата обновления";
-                break;
-            case "status":
-                fieldName = "Статус договора";
-                break;
-            default:
-                fieldName = field;
-                break;
-        }
-        return fieldName;
+        return switch (field) {
+            case "id" -> "ID";
+            case "name" -> "Name";
+            case "dateContract" -> "Дата договора";
+            case "dateUsing" -> "Дата обновления";
+            case "status" -> "Статус договора";
+            default -> field;
+        };
     }
 
-    public Contract() {
-    }
+    public Contract() {}
 
     public Contract(Integer id, String name, LocalDate dateContract, LocalDate dateUsing, String status) {
         this.id = id;
